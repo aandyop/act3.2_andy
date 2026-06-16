@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernesto Martínez | Libros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <!-- Navegador -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; background-color: var(--bg-main);">
+        <a href="index.html" class="logo" style="font-family: var(--font-titles); text-decoration: none; color: var(--text-white); font-size: 24px;">Ernesto Martínez</a>
+        <nav>
+            <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Inicio</a></li>
+                <li><a href="libros.html" style="color: var(--accent-gold); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">Libros</a></li>
+                <li><a href="sobre-autor.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Sobre el autor</a></li>
+                <li><a href="contacto.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 40px 5% 80px 5%; min-height: 70vh;">
+        <h1 style="margin-bottom: 60px;">Libros</h1>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+            <!-- Tarjeta 1 -->
+            <div class="book-card" style="background-color: var(--bg-secondary); border: 1px solid #333; display: flex; flex-direction: column;">
+                <img src="../act3.1_Andy_Martinez/img/portada-photoshop.jpg" alt="El Libro de Photoshop" style="width: 100%; height: auto; object-fit: cover;">
+                <div style="padding: 24px;">
+                    <span class="subtitle">Último Libro · 2026</span>
+                    <h5 style="margin: 10px 0 15px 0;">El Libro de Photoshop</h5>
+                    <p style="color: var(--text-light); font-size: 15px;">Domina el estándar de la industria. Esta guía te enseña desde el retoque básico hasta fotomontajes avanzados para transformar tus imágenes por completo.</p>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="book-card" style="background-color: var(--bg-secondary); border: 1px solid #333; display: flex; flex-direction: column;">
+                <img src="../act3.1_Andy_Martinez/img/portada-luminar.jpg" alt="Guía de Luminar Neo" style="width: 100%; height: auto; object-fit: cover;">
+                <div style="padding: 24px;">
+                    <span class="subtitle">Febrero · 2026</span>
+                    <h5 style="margin: 10px 0 15px 0;">Guía de Luminar Neo</h5>
+                    <p style="color: var(--text-light); font-size: 15px;">Descubre el poder de la inteligencia artificial. Un manual práctico para potenciar y editar tus fotos de forma rápida, intuitiva y profesional.</p>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="book-card" style="background-color: var(--bg-secondary); border: 1px solid #333; display: flex; flex-direction: column;">
+                <img src="../act3.1_Andy_Martinez/img/portada-lightroom.jpg" alt="Descubriendo Lightroom Classic 2026" style="width: 100%; height: auto; object-fit: cover;">
+                <div style="padding: 24px;">
+                    <span class="subtitle">Diciembre · 2025</span>
+                    <h5 style="margin: 10px 0 15px 0;">Descubriendo Lightroom Classic 2026</h5>
+                    <p style="color: var(--text-light); font-size: 15px;">Optimiza tu flujo de trabajo. Aprende a organizar, revelar y exportar tus imágenes aprovechando al máximo todas las novedades de la versión 2026.</p>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="book-card" style="background-color: var(--bg-secondary); border: 1px solid #333; display: flex; flex-direction: column;">
+                <img src="../act3.1_Andy_Martinez/img/portada-nocturna.jpg" alt="Claves para dominar la Fotografía Nocturna" style="width: 100%; height: auto; object-fit: cover;">
+                <div style="padding: 24px;">
+                    <span class="subtitle">Septiembre · 2025</span>
+                    <h5 style="margin: 10px 0 15px 0;">Claves para dominar la Fotografía Nocturna</h5>
+                    <p style="color: var(--text-light); font-size: 15px;">Vence a la oscuridad. Aprende técnicas precisas de exposición, enfoque y composición para capturar espectaculares cielos estrellados y paisajes nocturnos.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="background-color: #000000; text-align: center; padding: 40px 20px; font-size: 14px; color: var(--text-light);">
+        <p>&copy; 2026 Ernesto Martínez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

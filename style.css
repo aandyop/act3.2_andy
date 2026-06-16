@@ -1,0 +1,97 @@
+/* Importación de tipografías  */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-main: #1B1714;
+    --bg-secondary: #231E1A;
+    --text-white: #FFFFFF;
+    --text-light: #F0E8D5;
+    --accent-gold: #C4945A;
+    --font-titles: 'Libre Baskerville', serif;
+    --font-subtitles: 'DM Mono', monospace;
+    --font-body: 'Jost', sans-serif;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: var(--font-titles); 
+    font-weight: 400;
+    color: var(--text-white);
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 36px; }
+h4 { font-size: 32px; }
+h5 { font-size: 24px; }
+h6 { font-size: 20px; }
+
+.subtitle, .book-meta {
+    font-family: var(--font-subtitles);
+    color: var(--accent-gold);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Botón 1: Contorno Blanco */
+.btn-outline-white { 
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid var(--text-white);
+}
+.btn-outline-white:hover {
+    background-color: var(--text-white);
+    color: var(--bg-main);
+}
+
+/* Botón 2: Sólido Dorado */
+.btn-solid-gold { 
+    background-color: var(--accent-gold); 
+    color: var(--bg-main);
+    border: 1px solid var(--accent-gold);
+    font-weight: 500;
+}
+.btn-solid-gold:hover { 
+    background-color: #a87b45;
+    border-color: #a87b45;
+}
+
+/* Botón 3: Contorno Dorado */
+.btn-outline-gold { 
+    background-color: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+}
+.btn-outline-gold:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-main);
+}
