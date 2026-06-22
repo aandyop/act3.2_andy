@@ -1,0 +1,407 @@
+/* Importación de tipografías  */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-main: #1B1714;
+    --bg-secondary: #231E1A;
+    --text-white: #FFFFFF;
+    --text-light: #F0E8D5;
+    --accent-gold: #C4945A;
+    --font-titles: 'Libre Baskerville', serif;
+    --font-subtitles: 'DM Mono', monospace;
+    --font-body: 'Jost', sans-serif;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: var(--font-titles); 
+    font-weight: 400;
+    color: var(--text-white);
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 36px; }
+h4 { font-size: 32px; }
+h5 { font-size: 24px; }
+h6 { font-size: 20px; }
+
+.subtitle, .book-meta {
+    font-family: var(--font-subtitles);
+    color: var(--accent-gold);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-outline-white { 
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid var(--text-white);
+}
+.btn-outline-white:hover {
+    background-color: var(--text-white);
+    color: var(--bg-main);
+}
+
+.btn-solid-gold { 
+    background-color: var(--accent-gold); 
+    color: var(--bg-main);
+    border: 1px solid var(--accent-gold);
+    font-weight: 500;
+}
+.btn-solid-gold:hover { 
+    background-color: #a87b45;
+    border-color: #a87b45;
+}
+
+.link-all {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.link-all:hover {
+    color: var(--accent-gold);
+}
+
+
+/* =========================================
+   ESTILOS MOBILE FIRST (Base para móviles)
+   ========================================= */
+
+/* --- Navegador (Header) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Menos padding en móvil */
+    background: var(--bg-main); /* Fondo sólido en móvil para que lea el menú */
+    position: fixed; /* Fixed en vez de absolute para que siempre esté visible en móvil */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-titles);
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 20px; /* Un poco más pequeño en móvil */
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-white);
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-main);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.nav-menu.active {
+    max-height: 300px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-link-active {
+    color: var(--accent-gold);
+    font-weight: 500;
+}
+
+/* --- Sección HERO --- */
+.hero {
+    min-height: 100vh; /* Ocupa pantalla completa en móvil */
+    display: flex;
+    align-items: center;
+    padding: 100px 5% 50px; /* Padding superior para compensar header fijo */
+    background-image: linear-gradient(rgba(27, 23, 20, 0.7), rgba(27, 23, 20, 0.9)), url('../src/img/fondo-camara.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 100%;
+    text-align: center; /* Centrado en móvil */
+}
+
+.hero-title {
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-size: 40px; /* Ajuste para móvil */
+}
+
+.hero-title-highlight {
+    color: var(--accent-gold);
+    font-style: italic;
+}
+
+.hero-description {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* Botones apilados en móvil */
+    gap: 15px;
+}
+
+/* --- Sección Último libro --- */
+.featured-book {
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    align-items: center;
+    gap: 30px;
+    margin: 60px 5%;
+    text-align: center;
+}
+
+.featured-image-box {
+    width: 100%;
+    padding: 0;
+}
+
+.featured-img {
+    width: 100%;
+    max-width: 300px; /* Controla el tamaño en móviles */
+    height: auto;
+}
+
+.featured-text {
+    width: 100%;
+}
+
+.featured-title {
+    margin: 10px 0 20px 0;
+    line-height: 1.2;
+}
+
+.featured-description {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+/* --- Publicaciones recientes --- */
+.recent-publications {
+    background-color: #000000;
+    padding: 60px 5%; /* Padding reducido para móvil */
+}
+
+.recent-header {
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    gap: 40px;
+}
+
+.recent-card {
+    border-left: 2px solid var(--accent-gold); /* Borde más visible en móvil */
+    padding-left: 15px;
+}
+
+.card-title {
+    margin: 10px 0;
+}
+
+.card-description {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+
+/* =========================================
+   MEDIA QUERIES (ESCRITORIO)
+   Aquí se restauran tus estilos originales exactos
+   ========================================= */
+
+@media (min-width: 992px) {
+    /* Header original */
+    .main-header {
+        padding: 40px 5%;
+        background: linear-gradient(to bottom, rgba(27,23,20,1) 0%, rgba(27,23,20,0) 100%);
+        position: absolute; /* Vuelve a ser absoluto */
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        background: transparent;
+        width: auto;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    /* Hero original */
+    .hero {
+        min-height: 900px;
+        padding: 0 5%;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    /* Último Libro original */
+    .featured-book {
+        flex-direction: row;
+        gap: 60px;
+        margin: 80px 5%;
+        text-align: left;
+    }
+
+    .featured-image-box {
+        padding: 30px;
+        width: 75%;
+    }
+
+    .featured-img {
+        max-width: none;
+        transform: translate(30px, -30px); /* Vuelve el efecto desplazado */
+    }
+
+    .featured-text {
+        width: 60%;
+    }
+
+    .featured-description {
+        margin-bottom: 40px;
+        max-width: 500px;
+    }
+
+    /* Publicaciones recientes original */
+    .recent-publications {
+        padding: 250px 150px; /* Tu margen gigante original */
+    }
+
+    .recent-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .recent-grid {
+        grid-template-columns: repeat(3, 1fr); /* Vuelve a 3 columnas */
+        gap: 40px;
+    }
+
+    .recent-card {
+        border-left: 1px solid #333;
+        padding-left: 20px;
+    }
+}
