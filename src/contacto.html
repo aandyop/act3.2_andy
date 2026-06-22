@@ -8,55 +8,64 @@
 </head>
 <body>
 
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; background-color: #000000;">
-        <a href="index.html" class="logo" style="font-family: var(--font-titles); text-decoration: none; color: var(--text-white); font-size: 24px;">Ernesto Martínez</a>
-        <nav>
-            <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
-                <li><a href="index.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Inicio</a></li>
-                <li><a href="libros.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Libros</a></li>
-                <li><a href="sobre-autor.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Sobre el autor</a></li>
-                <li><a href="contacto.html" style="color: var(--accent-gold); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">Contacto</a></li>
+    <header class="main-header header-static">
+        <a href="index.html" class="logo">Ernesto Martínez</a>
+        
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="libros.html" class="nav-link">Libros</a></li>
+                <li><a href="sobre-autor.html" class="nav-link">Sobre el autor</a></li>
+                <li><a href="contacto.html" class="nav-link nav-link-active">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="padding: 80px 5%; display: flex; gap: 100px;">
-        <div style="width: 40%;">
+    <main class="contact-main">
+        <div class="contact-info">
             <span class="subtitle">CONTACTO</span>
-            <h1 style="margin: 10px 0 30px 0;">Escribir</h1>
-            <p style="color: var(--text-light); margin-bottom: 40px;">Para consultas sobre derechos de traducción, conferencias, colaboraciones editoriales o entrevistas, por favor usa el formulario o escribe directamente a su agente.</p>
+            <h1 class="contact-title">Escribir</h1>
+            <p class="contact-description">Para consultas sobre derechos de traducción, conferencias, colaboraciones editoriales o entrevistas, por favor usa el formulario o escribe directamente a su agente.</p>
             
-            <div style="border-top: 1px solid #333; padding-top: 30px;">
-                <p style="font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px;">Contacto de prensa</p>
-                <p style="color: var(--text-white); margin-bottom: 20px;">ernesto@correo.com</p>
-                <p style="font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px;">Redes sociales</p>
-                <p style="color: var(--text-white);">@ernesto_fotografo</p>
+            <div class="contact-details">
+                <p class="detail-label">Contacto de prensa</p>
+                <p class="detail-value value-spaced">ernesto@correo.com</p>
+                <p class="detail-label">Redes sociales</p>
+                <p class="detail-value">@ernesto_fotografo</p>
             </div>
         </div>
 
-        <form action="procesar.php" method="POST" style="width: 60%;">
-            <div style="margin-bottom: 30px;">
-                <label style="display: block; color: #888; font-size: 12px; margin-bottom: 10px;">NOMBRE COMPLETO</label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; background: transparent; border: 1px solid #333; padding: 15px; color: white;">
+        <form action="procesar.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label class="form-label">NOMBRE COMPLETO</label>
+                <input type="text" name="nombre" placeholder="Tu nombre" required class="form-input">
             </div>
-            <div style="margin-bottom: 30px;">
-                <label style="display: block; color: #888; font-size: 12px; margin-bottom: 10px;">CORREO</label>
-                <input type="email" name="email" placeholder="Tu@email.com" required style="width: 100%; background: transparent; border: 1px solid #333; padding: 15px; color: white;">
+            <div class="form-group">
+                <label class="form-label">CORREO</label>
+                <input type="email" name="email" placeholder="Tu@email.com" required class="form-input">
             </div>
-            <div style="margin-bottom: 30px;">
-                <label style="display: block; color: #888; font-size: 12px; margin-bottom: 10px;">ASUNTO</label>
-                <input type="text" name="asunto" placeholder="Motivo del contacto" required style="width: 100%; background: transparent; border: 1px solid #333; padding: 15px; color: white;">
+            <div class="form-group">
+                <label class="form-label">ASUNTO</label>
+                <input type="text" name="asunto" placeholder="Motivo del contacto" required class="form-input">
             </div>
-            <div style="margin-bottom: 30px;">
-                <label style="display: block; color: #888; font-size: 12px; margin-bottom: 10px;">MENSAJE</label>
-                <textarea name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..." required style="width: 100%; background: transparent; border: 1px solid #333; padding: 15px; color: white;"></textarea>
+            <div class="form-group">
+                <label class="form-label">MENSAJE</label>
+                <textarea name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..." required class="form-input"></textarea>
             </div>
-            <button type="submit" style="background: var(--accent-gold); color: white; border: none; padding: 15px 40px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">Enviar mensaje</button>
+            <button type="submit" class="btn-submit">Enviar mensaje</button>
         </form>
     </main>
 
-    <footer style="background-color: #000000; text-align: center; padding: 40px 20px; font-size: 14px; color: var(--text-light);">
+    <footer class="main-footer">
         <p>&copy; 2026 Ernesto Martínez. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

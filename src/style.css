@@ -96,30 +96,30 @@ h6 { font-size: 20px; }
     color: var(--accent-gold);
 }
 
+/* --- Estilos Responsive --- */
 
-/* =========================================
-   ESTILOS MOBILE FIRST (Base para móviles)
-   ========================================= */
-
-/* --- Navegador (Header) --- */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Menos padding en móvil */
-    background: var(--bg-main); /* Fondo sólido en móvil para que lea el menú */
-    position: fixed; /* Fixed en vez de absolute para que siempre esté visible en móvil */
+    padding: 20px 5%;
+    background: var(--bg-main);
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
 }
 
+.header-static {
+    background-color: #1B1714;
+}
+
 .logo {
     font-family: var(--font-titles);
     text-decoration: none;
     color: var(--text-white);
-    font-size: 20px; /* Un poco más pequeño en móvil */
+    font-size: 20px;
 }
 
 .menu-toggle {
@@ -178,26 +178,26 @@ h6 { font-size: 20px; }
     font-weight: 500;
 }
 
-/* --- Sección HERO --- */
+/* --- Sección HERO (index) --- */
 .hero {
-    min-height: 100vh; /* Ocupa pantalla completa en móvil */
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 5% 50px; /* Padding superior para compensar header fijo */
-    background-image: linear-gradient(rgba(27, 23, 20, 0.7), rgba(27, 23, 20, 0.9)), url('../src/img/fondo-camara.jpg');
+    padding: 100px 5% 50px;
+    background-image: linear-gradient(rgba(27, 23, 20, 0.7), rgba(27, 23, 20, 0.9)), url('img/fondo-camara.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hero-content {
     max-width: 100%;
-    text-align: center; /* Centrado en móvil */
+    text-align: center;
 }
 
 .hero-title {
     line-height: 1.1;
     margin-bottom: 20px;
-    font-size: 40px; /* Ajuste para móvil */
+    font-size: 40px;
 }
 
 .hero-title-highlight {
@@ -213,14 +213,14 @@ h6 { font-size: 20px; }
 
 .hero-buttons {
     display: flex;
-    flex-direction: column; /* Botones apilados en móvil */
+    flex-direction: column;
     gap: 15px;
 }
 
-/* --- Sección Último libro --- */
+/* --- Último Libro --- */
 .featured-book {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     align-items: center;
     gap: 30px;
     margin: 60px 5%;
@@ -234,7 +234,7 @@ h6 { font-size: 20px; }
 
 .featured-img {
     width: 100%;
-    max-width: 300px; /* Controla el tamaño en móviles */
+    max-width: 500px;
     height: auto;
 }
 
@@ -256,12 +256,12 @@ h6 { font-size: 20px; }
 /* --- Publicaciones recientes --- */
 .recent-publications {
     background-color: #000000;
-    padding: 60px 5%; /* Padding reducido para móvil */
+    padding: 60px 5%;
 }
 
 .recent-header {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 40px;
@@ -269,12 +269,12 @@ h6 { font-size: 20px; }
 
 .recent-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    grid-template-columns: 1fr;
     gap: 40px;
 }
 
 .recent-card {
-    border-left: 2px solid var(--accent-gold); /* Borde más visible en móvil */
+    border-left: 2px solid var(--accent-gold);
     padding-left: 15px;
 }
 
@@ -287,6 +287,147 @@ h6 { font-size: 20px; }
     font-size: 15px;
 }
 
+
+/* --- Contacto --- */
+.contact-main {
+    padding: 100px 5% 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-info {
+    width: 100%;
+}
+
+.contact-title {
+    margin: 10px 0 20px 0;
+}
+
+.contact-description {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+}
+
+.detail-label {
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-value {
+    color: var(--text-white);
+}
+
+.value-spaced {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-label {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #333;
+    padding: 15px;
+    color: white;
+    font-family: var(--font-body);
+}
+
+.form-input:focus {
+    outline: 1px solid var(--accent-gold);
+}
+
+.btn-submit {
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    width: 100%; /* Botón ancho completo en móvil */
+}
+
+.btn-submit:hover {
+    background-color: #a87b45;
+}
+
+/* --- Libros --- */
+.books-main {
+    padding: 120px 5% 80px 5%;
+    min-height: 70vh;
+}
+
+.books-title {
+    margin-bottom: 40px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.book-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 24px;
+}
+
+.book-name {
+    margin: 10px 0 15px 0;
+}
+
+.book-description {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* --- Sobre el Autor --- */
+.author-container { 
+    flex-direction: column !important; 
+    gap: 30px !important;
+}
+.author-container > div { 
+    width: 100% !important; 
+}
+.hero-author-content { 
+    padding: 40px 5% !important; 
+}
+
 /* --- Footer --- */
 .main-footer {
     background-color: #000000;
@@ -296,18 +437,19 @@ h6 { font-size: 20px; }
     color: var(--text-light);
 }
 
-
-/* =========================================
-   MEDIA QUERIES (ESCRITORIO)
-   Aquí se restauran tus estilos originales exactos
-   ========================================= */
+/* == MEDIA QUERIES (ESCRITORIO) == */
 
 @media (min-width: 992px) {
-    /* Header original */
+    /* Header */
     .main-header {
         padding: 40px 5%;
         background: linear-gradient(to bottom, rgba(27,23,20,1) 0%, rgba(27,23,20,0) 100%);
-        position: absolute; /* Vuelve a ser absoluto */
+        position: absolute;
+    }
+
+    .header-static {
+        position: static;
+        background-color: #1B1714;
     }
     
     .logo {
@@ -332,7 +474,7 @@ h6 { font-size: 20px; }
         padding: 0;
     }
 
-    /* Hero original */
+    /* Hero */
     .hero {
         min-height: 900px;
         padding: 0 5%;
@@ -355,8 +497,8 @@ h6 { font-size: 20px; }
         flex-direction: row;
         gap: 20px;
     }
-
-    /* Último Libro original */
+    
+    /* Último libro */
     .featured-book {
         flex-direction: row;
         gap: 60px;
@@ -366,12 +508,12 @@ h6 { font-size: 20px; }
 
     .featured-image-box {
         padding: 30px;
-        width: 75%;
+        width: 50%;
     }
 
     .featured-img {
         max-width: none;
-        transform: translate(30px, -30px); /* Vuelve el efecto desplazado */
+        transform: translate(30px, -30px);
     }
 
     .featured-text {
@@ -383,9 +525,9 @@ h6 { font-size: 20px; }
         max-width: 500px;
     }
 
-    /* Publicaciones recientes original */
+    /* Publicaciones recientes */
     .recent-publications {
-        padding: 250px 150px; /* Tu margen gigante original */
+        padding: 250px 150px;
     }
 
     .recent-header {
@@ -396,12 +538,120 @@ h6 { font-size: 20px; }
     }
 
     .recent-grid {
-        grid-template-columns: repeat(3, 1fr); /* Vuelve a 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
         gap: 40px;
     }
 
     .recent-card {
         border-left: 1px solid #333;
         padding-left: 20px;
+    }
+
+    /* Contacto */
+    .contact-main {
+        padding: 80px 5%;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .contact-info {
+        width: 40%;
+    }
+
+    .contact-title {
+        margin: 10px 0 30px 0;
+    }
+
+    .contact-description {
+        margin-bottom: 40px;
+    }
+
+    .contact-form {
+        width: 60%;
+    }
+
+    .btn-submit {
+        width: auto;
+    }
+    
+    /* Libros */
+    .books-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Sobre el Autor */
+    .author-container { 
+        display: flex !important; 
+        gap: 60px !important; 
+        padding: 40px 5% 80px 5% !important; 
+    }
+}
+
+
+/* --- CONFIGURACIÓN RESPONSIVE MOBILE FIRST --- */
+
+/* 1. Header en Móvil */
+.main-header {
+    padding: 20px 5% !important;
+}
+
+/* 2. Sección Hero (Sobre el Autor) */
+.hero {
+    min-height: 500px !important; /* Más bajo en móvil */
+    padding: 20px 5% !important;
+}
+
+/* 3. Contenedor del Autor (Mobile First) */
+.author-container {
+    display: flex !important;
+    flex-direction: column !important; /* Apilado en móvil */
+    gap: 30px !important;
+    padding: 40px 5% !important;
+}
+
+.author-container > div {
+    width: 100% !important; /* Ancho completo en móvil */
+}
+
+/* 4. Grid de Publicaciones (Mobile First) */
+/* Aseguramos que la cuadrícula se adapte a 1 columna en móvil */
+.recent-publications > div:last-child {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+}
+
+/* --- ADAPTACIÓN A ESCRITORIO (Media Query) --- */
+@media (min-width: 992px) {
+    /* Header Escritorio */
+    .main-header {
+        padding: 40px 5% !important;
+    }
+
+    /* Hero Escritorio */
+    .hero {
+        min-height: 900px !important;
+        padding: 0 5% 60px 5% !important;
+    }
+
+    /* Contenedor Autor Escritorio (Fila) */
+    .author-container {
+        flex-direction: row !important;
+        padding: 40px 5% 80px 5% !important;
+        gap: 60px !important;
+    }
+
+    .author-container > div:first-child {
+        width: 65% !important;
+    }
+
+    .author-container > div:last-child {
+        width: 35% !important;
+    }
+
+    /* Grid Publicaciones Escritorio */
+    .recent-publications > div:last-child {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 40px !important;
     }
 }

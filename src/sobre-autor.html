@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>    
-    <!-- Navegador -->
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; background: linear-gradient(to bottom, rgba(27,23,20,1) 0%, rgba(27,23,20,0) 100%); position: absolute; top: 0; left: 0; width: 100%; z-index: 10;">
+    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; background: linear-gradient(to bottom, rgba(27,23,20,1) 0%, rgba(27,23,20,0) 100%); position: absolute; top: 0; left: 0; width: 100%; z-index: 10;">
         <a href="index.html" class="logo" style="font-family: var(--font-titles); text-decoration: none; color: var(--text-white); font-size: 24px;">Ernesto Martínez</a>
-        <nav>
-            <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-list" style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
                 <li><a href="index.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Inicio</a></li>
                 <li><a href="libros.html" style="color: var(--text-white); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;">Libros</a></li>
                 <li><a href="sobre-autor.html" style="color: var(--accent-gold); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">Sobre el autor</a></li>
@@ -21,15 +27,14 @@
     </header>
 
     <main>
-        <!-- Sobre el Autor -->
         <section class="hero" style="min-height: 900px; display: flex; align-items: flex-end; padding: 0 5% 60px 5%; background-image: linear-gradient(rgba(27, 23, 20, 0.4), rgba(27, 23, 20, 1)), url('../src/img/paisaje.jpg'); background-size: cover; background-position: center;">
-            <div style="max-width: 800px; width: 100%;">
+            <div class="hero-author-content" style="max-width: 800px; width: 100%;">
                 <span class="subtitle" style="display: block; margin-bottom: 10px;">SOBRE EL AUTOR</span>
                 <h1 style="line-height: 1.1; margin: 0;">Ernesto Martínez</h1>
             </div>
         </section>
 
-        <section style="display: flex; gap: 60px; padding: 40px 5% 80px 5%; align-items: flex-start;">
+        <section class="author-container" style="display: flex; gap: 60px; padding: 40px 5% 80px 5%; align-items: flex-start;">
             <div style="width: 65%;">
                 <p style="color: var(--text-light); margin-bottom: 24px; font-size: 16px;">Nacido en La Habana, Cuba, en 1963, Ernesto Martínez se ha consolidado como una figura indispensable en el ámbito de la literatura fotográfica de habla hispana. Con una carrera que ha evolucionado a la par de los grandes saltos tecnológicos de la creación de imágenes, Martínez ha sabido combinar su profunda pasión por la captura visual con una vocación didáctica excepcional. Su trayectoria refleja una comprensión integral de la fotografía, abordándola no solo como un medio de expresión artística, sino como una disciplina técnica en constante transformación.</p>
                 
@@ -70,11 +75,10 @@
                         <p style="font-size: 16px; color: var(--text-white);">4 Libros publicados</p>
                     </div>
                 </div>
-                <a href="contacto.html" class="btn btn-outline-gold" style="display: block; width: 100%; text-align: center;">CONTACTAR</a>
+                <a href="contacto.html" class="btn btn-solid-gold" style="display: block; width: 100%; text-align: center;">CONTACTAR</a>
             </div>
         </section>
 
-        <!-- Publicaciones recientes -->
         <section class="recent-publications" style="background-color: #000000; padding: 80px 5%;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px;">
                 <h3>Publicaciones recientes</h3>
@@ -82,19 +86,16 @@
             </div>
             
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
-                <!-- Tarjeta 1 -->
                 <div style="border-left: 1px solid #333; padding-left: 20px;">
                     <span class="subtitle">Último Libro · 2026</span>
                     <h5 style="margin: 10px 0;">El Libro de Photoshop</h5>
                     <p style="color: var(--text-light); font-size: 15px;">Domina el estándar de la industria. Esta guía te enseña desde el retoque básico hasta fotomontajes avanzados para transformar tus imágenes por completo.</p>
                 </div>
-                <!-- Tarjeta 2 -->
                 <div style="border-left: 1px solid #333; padding-left: 20px;">
                     <span class="subtitle">Febrero · 2026</span>
                     <h5 style="margin: 10px 0;">Guía de Luminar Neo</h5>
                     <p style="color: var(--text-light); font-size: 15px;">Descubre el poder de la inteligencia artificial. Un manual práctico para potenciar y editar tus fotos de forma rápida, intuitiva y profesional.</p>
                 </div>
-                <!-- Tarjeta 3 -->
                 <div style="border-left: 1px solid #333; padding-left: 20px;">
                     <span class="subtitle">Diciembre · 2025</span>
                     <h5 style="margin: 10px 0;">Descubriendo Lightroom Classic 2026</h5>
@@ -107,5 +108,7 @@
     <footer style="background-color: #000000; text-align: center; padding: 40px 20px; font-size: 14px; color: var(--text-light);">
         <p>&copy; 2026 Ernesto Martínez. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
