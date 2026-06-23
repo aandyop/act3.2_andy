@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("mobile-menu"),t=document.querySelector(".nav-menu");e.addEventListener("click",()=>{t.classList.toggle("active"),e.classList.toggle("open")})})})();
